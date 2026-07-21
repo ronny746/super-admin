@@ -1,0 +1,19 @@
+--- super-admin-landing-page/pages/student/TestWindowPage.jsx
++++ super-admin-landing-page/pages/student/TestWindowPage.jsx
+@@ -328,10 +328,14 @@
+                 });
+ 
+                 // Stop camera
+-                if (cameraStream) {
+-                    cameraStream.getTracks().forEach(track => track.stop());
++                try {
++                    if (cameraStream) {
++                        cameraStream.getTracks().forEach(track => track.stop());
++                    }
++                } catch (camErr) {
++                    console.error("Camera stop error:", camErr);
+                 }
++
+                 setFinalSubmitType("auto-violation");
+                 setIsSubmitted(true);
+                 localStorage.removeItem("testToken");
