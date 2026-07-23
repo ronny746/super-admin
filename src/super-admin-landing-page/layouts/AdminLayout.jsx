@@ -214,12 +214,19 @@ export default function AdminLayout({ children }) {
                     <BookOpen size={22} />
                     {open && "Question Bank"}
                   </Link>
+                  <Link
+                    to="/admin/paper-generator"
+                    className="flex items-center gap-4 p-3 rounded-lg bg-white/10 hover:bg-white/20 transition"
+                  >
+                    <FileText size={22} />
+                    {open && "Paper Generator"}
+                  </Link>
                   <a
                     href="https://scholarspathshala.com/login?email=admin@papergen.com&password=admin123&autologin=true"
                     className="flex items-center gap-4 p-3 rounded-lg bg-white/10 hover:bg-white/20 transition"
                   >
                     <FileText size={22} />
-                    {open && "Paper Generator"}
+                    {open && "Paper Generator Portal"}
                   </a>
                   <Link
                     to="/admin/live-monitoring"
