@@ -73,11 +73,10 @@ export default function AdminLayout({ children }) {
               <div className="text-xs text-white/60 font-semibold mt-4 mb-2 px-3">COUNSELOR SPACE</div>
               <Link
                 to="/admin/lead-management/dashboard"
-                className={`flex items-center gap-4 p-3 rounded-lg transition ${
-                  location.pathname === '/admin/lead-management/dashboard' || location.pathname === '/admin/lead-management'
+                className={`flex items-center gap-4 p-3 rounded-lg transition ${location.pathname === '/admin/lead-management/dashboard' || location.pathname === '/admin/lead-management'
                     ? 'bg-white/30 text-white font-bold shadow-sm'
                     : 'bg-white/10 hover:bg-white/20'
-                }`}
+                  }`}
               >
                 <Monitor size={22} />
                 {open && "My Dashboard"}
@@ -85,22 +84,20 @@ export default function AdminLayout({ children }) {
 
               <Link
                 to="/admin/lead-management/leads"
-                className={`flex items-center gap-4 p-3 rounded-lg transition ${
-                  location.pathname === '/admin/lead-management/leads'
+                className={`flex items-center gap-4 p-3 rounded-lg transition ${location.pathname === '/admin/lead-management/leads'
                     ? 'bg-white/30 text-white font-bold shadow-sm'
                     : 'bg-white/10 hover:bg-white/20'
-                }`}
+                  }`}
               >
                 <Users size={22} />
                 {open && "My Leads"}
               </Link>
               <Link
                 to="/admin/lead-management/tasks"
-                className={`flex items-center gap-4 p-3 rounded-lg transition ${
-                  location.pathname === '/admin/lead-management/tasks'
+                className={`flex items-center gap-4 p-3 rounded-lg transition ${location.pathname === '/admin/lead-management/tasks'
                     ? 'bg-white/30 text-white font-bold shadow-sm'
                     : 'bg-white/10 hover:bg-white/20'
-                }`}
+                  }`}
               >
                 <CheckSquare size={22} />
                 {open && "My Tasks"}
@@ -217,13 +214,13 @@ export default function AdminLayout({ children }) {
                     <BookOpen size={22} />
                     {open && "Question Bank"}
                   </Link>
-                  <Link
-                    to="/admin/paper-generator"
+                  <a
+                    href="https://scholarspathshala.com/login?email=admin@papergen.com&password=admin123&autologin=true"
                     className="flex items-center gap-4 p-3 rounded-lg bg-white/10 hover:bg-white/20 transition"
                   >
                     <FileText size={22} />
                     {open && "Paper Generator"}
-                  </Link>
+                  </a>
                   <Link
                     to="/admin/live-monitoring"
                     className="flex items-center gap-4 p-3 rounded-lg bg-white/10 hover:bg-white/20 transition"
